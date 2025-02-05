@@ -1,93 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wayne Eldon Gregory Jr III - Logistics Manager, Founder of Banabyte LLC, Technology Analyst, and Avid Homelab Builder.">
-  <meta name="keywords" content="Wayne Gregory, Banabyte, Logistics Manager, Homelab Builder, Technology Analyst">
-  <meta name="author" content="Wayne Eldon Gregory Jr III">
-  <title>Wayne Eldon Gregory Jr III - Waynes.bio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <!-- Dark/Light Mode Toggle -->
-  <button id="theme-toggle" aria-label="Toggle Dark Mode">
-    <i class="fas fa-moon"></i>
-  </button>
+/* General Styles */
+:root {
+  --primary-color: #0073e6;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --card-background: #fff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  <header>
-    <div class="container">
-      <h1>Wayne Eldon Gregory Jr III</h1>
-      <p>Logistics Manager | Founder of Banabyte LLC | Technology Enthusiast</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#interests">Interests</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+[data-theme="dark"] {
+  --primary-color: #1e90ff;
+  --background-color: #1a1a1a;
+  --text-color: #f4f4f4;
+  --card-background: #2a2a2a;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
-  <main class="container">
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am a Logistics Manager at Dollar General Logistics with a passion for technology and building homelabs. I founded Banabyte LLC on November 20, 2021, and I’m always exploring new ways to innovate and improve systems.</p>
-      <p>I’m a social, easy-going person who loves to connect with others. Standing at 6'4", I’m often referred to as a "tower" by friends and family. I’m a strong conservative and proud of my values.</p>
-    </section>
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    <!-- Interests Section -->
-    <section id="interests">
-      <h2>Interests</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fas fa-gamepad"></i>
-          <h3>Favorite Games</h3>
-          <p>Hearts of Iron 4, Command and Conquer Generals/Zero Hour, Age of Empires, Empire Earth 1, Stronghold Crusader Extreme HD.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-bowling-ball"></i>
-          <h3>Favorite Sports</h3>
-          <p>Bowling, Pool, Basketball.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Hobbies</h3>
-          <p>Technology Analyst and Avid Homelab Builder.</p>
-        </div>
-      </div>
-    </section>
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-links">
-        <a href="mailto:wegj1@hotmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i>
-          <span>wegj1@hotmail.com</span>
-        </a>
-        <a href="https://www.facebook.com/WayneGregoryJrIII" target="_blank" class="contact-link">
-          <i class="fab fa-facebook"></i>
-          <span>Facebook</span>
-        </a>
-        <a href="https://banabyte.com" target="_blank" class="contact-link">
-          <i class="fas fa-globe"></i>
-          <span>Banabyte LLC</span>
-        </a>
-      </div>
-    </section>
-  </main>
+/* Header */
+header {
+  background: var(--card-background);
+  color: var(--text-color);
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Wayne Eldon Gregory Jr III. All rights reserved.</p>
-      <p>Visit my website: <a href="https://waynes.bio">Waynes.bio</a></p>
-    </div>
-  </footer>
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
 
-  <script src="assets/js/script.js"></script>
-</body>
-</html>
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Sections */
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.contact-link i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background: var(--card-background);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  box-shadow: var(--shadow);
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Theme Toggle */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  color: #fff;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
